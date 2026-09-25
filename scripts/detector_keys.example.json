@@ -1,0 +1,10 @@
+{
+  "hive_api_key": "",
+  "hive_key_id": "",
+  "aiornot_api_key": "",
+  "illuminarty_api_key": "",
+  "sightengine_api_user": "",
+  "sightengine_api_secret": "",
+  "escalation_multiplier": 1.0,
+  "chain_mode": false
+}

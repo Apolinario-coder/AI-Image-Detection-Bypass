@@ -1,0 +1,74 @@
+{
+  "name": "deai-image",
+  "version": "2.0.0",
+  "description": "State-of-the-art AI image de-fingerprinting and anti-detection suite. Neutralizes SynthID, Sightengine, Hive, Illuminarty, and AI or Not via native SDXL purification, frequency separation (DeSynth), physical CMOS Bayer demosaicing, and authentic smartphone EXIF injection.",
+  "main": "scripts/deai.py",
+  "author": "swaylq",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swaylq/deai-image.git"
+  },
+  "keywords": [
+    "ai-detection",
+    "de-ai",
+    "sightengine-bypass",
+    "synthid-bypass",
+    "image-processing",
+    "metadata-removal",
+    "c2pa-purge",
+    "camera-physics",
+    "cmos-sensor",
+    "bayer-demosaic",
+    "stable-diffusion-xl",
+    "flux",
+    "midjourney",
+    "dalle",
+    "openclaw",
+    "agent-skill"
+  ],
+  "skills": {
+    "name": "deai-image",
+    "type": "image-processing",
+    "category": "tools",
+    "requires": [
+      "python3"
+    ],
+    "optional": [
+      "exiftool",
+      "imagemagick",
+      "cuda"
+    ],
+    "commands": {
+      "deai": {
+        "description": "Run AI de-fingerprinting pipeline on an image or directory",
+        "exec": "python scripts/deai.py",
+        "args": ["<input>"],
+        "options": {
+          "--output": "Output file path",
+          "--strength": "Processing strength (light/medium/heavy)",
+          "--camera": "Simulated camera EXIF profile (default: samsung_s26)",
+          "--check-detectors": "Automatically benchmark results against AI detector APIs",
+          "--no-metadata": "Purge C2PA and inject clean EXIF without altering image pixels",
+          "--batch": "Batch process an entire directory"
+        }
+      },
+      "deai-bash": {
+        "description": "Lightweight bash version (no GPU required)",
+        "exec": "bash scripts/deai.sh",
+        "args": ["<input>", "<output>", "[strength]"]
+      },
+      "check-deps": {
+        "description": "Verify system dependencies and GPU hardware",
+        "exec": "bash scripts/check_deps.sh"
+      }
+    }
+  },
+  "homepage": "https://github.com/swaylq/deai-image#readme",
+  "bugs": {
+    "url": "https://github.com/swaylq/deai-image/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

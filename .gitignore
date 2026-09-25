@@ -1,0 +1,34 @@
+# Configurações e chaves sensíveis
+scripts/detector_keys.json
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Ambientes virtuais
+venv/
+.venv/
+env/
+
+# Imagens de saída geradas e temporárias
+scripts/*_deai.jpg
+scripts/*_s26.jpg
+scripts/*_verified.jpg
+scripts/*_clean.*
+scripts/deai_output/
+scripts/comparacao/
+scripts/teste_crops/
+scripts/teste*/
+scripts/def/
+scripts/fotos_iphone/
+*_deai.jpg
+
+# IDEs e Sistema Operacional
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

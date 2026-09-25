@@ -1,4 +1,4 @@
-# 🛡️ AI Image De-Fingerprinting & Anti-Detection Suite (v2.0)
+# 🛡️ AI Image De-Fingerprinting & Anti-Detection Suite (v1.0)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-green.svg)](https://www.python.org/)
@@ -80,8 +80,8 @@ Modern AI detectors do not simply inspect metadata; they evaluate deep mathemati
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/swaylq/deai-image.git
-cd deai-image
+git clone https://github.com/Apolinario-coder/AI-Image-Detection-Bypass.git
+cd AI-Image-Detection-Bypass
 
 # Install Python requirements
 pip install -r requirements.txt

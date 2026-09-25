@@ -1,8 +1,8 @@
-# 🚀 Production Deployment Report & Technical Specification (v2.0.0)
+# 🚀 Production Deployment Report & Technical Specification (v1.0.0)
 
 ## ✅ Deployment Status: PRODUCTION READY
 
-- **Release Version:** `2.0.0`
+- **Release Version:** `1.0.0`
 - **Release Channel:** Stable / Production
 - **License:** MIT
 - **Target Environments:** Windows 10/11, Linux (Ubuntu/Debian), macOS
@@ -91,8 +91,8 @@ All benchmarks were executed directly against official live detector endpoints:
 
 ### Step 1: Environment Setup
 ```bash
-git clone https://github.com/swaylq/deai-image.git
-cd deai-image
+git clone https://github.com/Apolinario-coder/AI-Image-Detection-Bypass.git
+cd AI-Image-Detection-Bypass
 python -m venv venv
 
 # Windows:

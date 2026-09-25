@@ -1,13 +1,13 @@
 {
-  "name": "deai-image",
-  "version": "2.0.0",
+  "name": "ai-image-detection-bypass",
+  "version": "1.0.0",
   "description": "State-of-the-art AI image de-fingerprinting and anti-detection suite. Neutralizes SynthID, Sightengine, Hive, Illuminarty, and AI or Not via native SDXL purification, frequency separation (DeSynth), physical CMOS Bayer demosaicing, and authentic smartphone EXIF injection.",
   "main": "scripts/deai.py",
-  "author": "swaylq",
+  "author": "Lucas Siqueira Apolinario (Apolinario-coder)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/swaylq/deai-image.git"
+    "url": "https://github.com/Apolinario-coder/AI-Image-Detection-Bypass.git"
   },
   "keywords": [
     "ai-detection",
@@ -28,7 +28,7 @@
     "agent-skill"
   ],
   "skills": {
-    "name": "deai-image",
+    "name": "ai-image-detection-bypass",
     "type": "image-processing",
     "category": "tools",
     "requires": [
@@ -64,9 +64,9 @@
       }
     }
   },
-  "homepage": "https://github.com/swaylq/deai-image#readme",
+  "homepage": "https://github.com/Apolinario-coder/AI-Image-Detection-Bypass#readme",
   "bugs": {
-    "url": "https://github.com/swaylq/deai-image/issues"
+    "url": "https://github.com/Apolinario-coder/AI-Image-Detection-Bypass/issues"
   },
   "engines": {
     "node": ">=14.0.0"

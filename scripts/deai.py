@@ -170,6 +170,242 @@ def create_samsung_s26_exif(width, height):
 
 
 # =====================================================================
+# INTERNATIONALIZATION (I18N) - DEFAULT: ENGLISH (EN), SECONDARY: PORTUGUESE (PT)
+# =====================================================================
+
+I18N = {
+    # Banner
+    'banner_subtitle': {
+        'en': "Anti-Detection • C2PA Purge • Galaxy S26 EXIF • Auto-Checkers • v1.0",
+        'pt': "Anti-Detecção • C2PA Purge • EXIF Galaxy S26 • Auto-Checkers • v1.0",
+    },
+    'banner_gpu': {
+        'en': "\n🚀 GPU Accelerator: {gpu}{vram} - Optical Physics Active",
+        'pt': "\n🚀 Acelerador GPU: {gpu}{vram} - Simulação Óptica Ativa",
+    },
+
+    # Main Menu
+    'main_menu_title': {'en': "Main Menu", 'pt': "Menu Principal"},
+    'col_option': {'en': "Option", 'pt': "Opção"},
+    'col_action': {'en': "Action", 'pt': "Ação"},
+    'col_description': {'en': "Description", 'pt': "Descrição"},
+    'select_option': {'en': "Select an option", 'pt': "Selecione uma opção"},
+    'press_enter': {'en': "Press Enter to return to menu...", 'pt': "Pressione Enter para voltar ao menu..."},
+    'goodbye': {'en': "Goodbye! Images de-fingerprinted and verified.", 'pt': "Até logo! Imagens descaracterizadas e testadas."},
+    'cancelled_by_user': {'en': "Operation cancelled by user.", 'pt': "Operação cancelada pelo usuário."},
+
+    'menu_opt1_act': {'en': "📸  Single Image Processing", 'pt': "📸  Processar Imagem Única"},
+    'menu_opt1_desc': {'en': "Full visual De-AI + S26 EXIF injection + AI test", 'pt': "De-AI visual completo + Injeção EXIF S26 + Teste IA"},
+    'menu_opt2_act': {'en': "📁  Batch Directory Processing", 'pt': "📁  Processamento em Lote"},
+    'menu_opt2_desc': {'en': "Process entire folder with EXIF and De-AI", 'pt': "Processar pasta de imagens com EXIF e De-AI"},
+    'menu_opt3_act': {'en': "🏷️   Purge C2PA / Inject S26 EXIF", 'pt': "🏷️   Purgar C2PA / Injetar EXIF S26"},
+    'menu_opt3_desc': {'en': "Metadata/C2PA only (zero pixel changes)", 'pt': "Apenas metadados/C2PA (Sem alterar pixels)"},
+    'menu_opt4_act': {'en': "🧪  Benchmark Image in AI Detectors", 'pt': "🧪  Testar Imagem em Detectores IA"},
+    'menu_opt4_desc': {'en': "Query ImageDetector, Sightengine, Hive, AI or Not, Illuminarty", 'pt': "Consultar ImageDetector, Sightengine, Hive, AI or Not, Illuminarty"},
+    'menu_opt5_act': {'en': "🔑  Configure API Keys", 'pt': "🔑  Configurar Chaves de API"},
+    'menu_opt5_desc': {'en': "Set keys for Sightengine, Hive, AI or Not", 'pt': "Inserir chaves para Sightengine, Hive, AI or Not"},
+    'menu_opt6_act': {'en': "⚡  Escalation Multiplier (X)", 'pt': "⚡  Fator de Aumento da Escalação (X)"},
+    'menu_opt6_desc': {'en': "Set multiplier per retry: [bold cyan]{val:.1f}x[/bold cyan] [dim](Default: 1.0x)[/dim]", 'pt': "Definir quantas X de aumento por tentativa: [bold cyan]{val:.1f}x[/bold cyan] [dim](Default: 1.0x)[/dim]"},
+    'menu_opt7_act': {'en': "🔍  System Diagnostics & Dependencies", 'pt': "🔍  Diagnóstico de Dependências"},
+    'menu_opt7_desc': {'en': "Check ExifTool, Pillow, NumPy, PyTorch CUDA and Playwright", 'pt': "Verificar ExifTool, Pillow, NumPy e Playwright"},
+    'menu_opt8_act': {'en': "📖  How It Works & Tips", 'pt': "📖  Como Funciona / Dicas"},
+    'menu_opt8_desc': {'en': "Understand C2PA, AI detectors, and camera physics", 'pt': "Entenda C2PA, detectores e o EXIF Galaxy S26"},
+    'menu_opt9_act': {'en': "🌐  Language / Idioma", 'pt': "🌐  Idioma / Language"},
+    'menu_opt9_desc_en': {'en': "Current: [bold green]English [EN][/bold green] ➔ Press to switch to Português [PT]", 'pt': "Current: [bold green]English [EN][/bold green] ➔ Pressione para mudar para Português [PT]"},
+    'menu_opt9_desc_pt': {'en': "Atual: [bold green]Português [PT][/bold green] ➔ Pressione para mudar para English [EN]", 'pt': "Atual: [bold green]Português [PT][/bold green] ➔ Pressione para mudar para English [EN]"},
+    'menu_opt0_act': {'en': "🚪  Exit", 'pt': "🚪  Sair"},
+    'menu_opt0_desc': {'en': "Close application", 'pt': "Encerrar aplicação"},
+
+    'lang_switched_en': {'en': "[bold green]Language successfully switched to English [EN]![/bold green]", 'pt': "[bold green]Language successfully switched to English [EN]![/bold green]"},
+    'lang_switched_pt': {'en': "[bold green]Idioma alterado com sucesso para Português [PT]![/bold green]", 'pt': "[bold green]Idioma alterado com sucesso para Português [PT]![/bold green]"},
+
+    # Presets
+    'preset_light_name': {'en': "Light", 'pt': "Leve (Light)"},
+    'preset_light_desc': {'en': "Subtle micro-noise + Bayer filter + complete metadata purge (Fastest)", 'pt': "Micro-ruído suave + filtro Bayer + purga total de metadados (Mais rápido)"},
+    'preset_medium_name': {'en': "Medium (Balanced - Recommended)", 'pt': "Médio (Equilibrado - Recomendado)"},
+    'preset_medium_desc': {'en': "Optimal balance: CMOS sensor physics + Bayer demosaicing + chromatic dispersion", 'pt': "Equilíbrio ideal: física de sensor CMOS + Bayer demosaic + aberração cromática (Recomendado)"},
+    'preset_heavy_name': {'en': "Heavy ({gpu})", 'pt': "Pesado (Heavy - {gpu})"},
+    'preset_heavy_desc': {'en': "Native SDXL Purification + High-Fidelity DeSynth Detail Restoration + CMOS Physics (< 1% AI)", 'pt': "Purificação SDXL Nativa + Restauração DeSynth Ultra-Fiel + Física CMOS (Evasão Total < 1% IA)"},
+    'preset_heavy_bypass': {'en': "99.0% - 99.9% (Passed All)", 'pt': "99.0% - 99.9% (Aprovado em Todos)"},
+
+    # Processing Steps
+    'step1_purge_meta': {'en': "Purging AI metadata and C2PA credentials", 'pt': "Purgando metadados de IA e credenciais C2PA"},
+    'step2_purify_sdxl': {'en': "Native SDXL Purification & DeSynth Detail Restoration ({gpu} - Neutralizes SynthID)", 'pt': "Purificação SDXL Nativa & Restauração DeSynth ({gpu} - Anula SynthID)"},
+    'step3_cmos_bayer': {'en': "Real CMOS sensor physics & Bayer demosaicing (GPU)", 'pt': "Demosaicing Bayer real & restauração MTF óptico (GPU)"},
+    'step4_optics': {'en': "Lateral chromatic dispersion and optical vignetting (Samsung S26)", 'pt': "Dispersão cromática lateral e vinheta óptica (Samsung S26)"},
+    'step5_grid_decouple': {'en': "Decoupling AI native grid ({w}x{h} → {nw}x{nh} via Lanczos4)...", 'pt': "Desacoplando grade nativa de IA ({w}x{h} → {nw}x{nh} via Lanczos4)..."},
+    'step5_portrait_rot': {'en': "Anti-Sightengine: applying handheld natural portrait rotation (6.8° Lanczos4)...", 'pt': "Anti-Sightengine: aplicando rotação natural handheld de retrato (6.8° Lanczos4)..."},
+    'step6_save_s26': {'en': "Injecting Galaxy S26 EXIF and saving", 'pt': "Injetando EXIF Galaxy S26 e salvando"},
+    'step6_save_clean': {'en': "Saving clean image file", 'pt': "Salvando arquivo limpo"},
+
+    # Summary Panel
+    'summary_box_title': {'en': "✓ Processing Successfully Completed!", 'pt': "✓ Processamento Concluído com Sucesso!"},
+    'sum_input_file': {'en': "Input File", 'pt': "Arquivo de Entrada"},
+    'sum_output_file': {'en': "Output File", 'pt': "Arquivo de Saída"},
+    'sum_orig_size': {'en': "Original Size", 'pt': "Tamanho Original"},
+    'sum_final_size': {'en': "Final Size", 'pt': "Tamanho Final"},
+    'sum_profile': {'en': "Visual Profile", 'pt': "Perfil Visual"},
+    'sum_camera': {'en': "Camera / Simulated EXIF", 'pt': "Câmera / EXIF Simulado"},
+    'sum_c2pa': {'en': "C2PA / AI Credentials", 'pt': "Credenciais C2PA / IA"},
+    'sum_c2pa_desc': {'en': "✓ Purged & Non-existent (Clean file without JUMBF manifests)", 'pt': "✓ Purgadas e Inexistentes (Arquivo novo sem manifests JUMBF)"},
+    'sum_accel': {'en': "Hardware Acceleration", 'pt': "Aceleração de Hardware"},
+    'sum_exiftool': {'en': "ExifTool Status", 'pt': "ExifTool"},
+    'sum_exiftool_found': {'en': "Available (Deep metadata purge and complete injection)", 'pt': "Disponível (Purga profunda de tags avançadas e injeção completa)"},
+    'sum_exiftool_native': {'en': "Not installed (Pillow injected native EXIF perfectly)", 'pt': "Não encontrado (Pillow injetou EXIF nativo perfeitamente)"},
+    'sum_detectors_title': {'en': "\n🔗 Supported Detectors for Verification:", 'pt': "\n🔗 Detectores Suportados para Verificação:"},
+
+    # Prompts & Inputs
+    'prompt_strength_title': {'en': "Select Processing Strength", 'pt': "Selecione o Nível de Intensidade"},
+    'prompt_level': {'en': "Level", 'pt': "Nível"},
+    'prompt_est_bypass': {'en': "Estimated Bypass", 'pt': "Evasão Estimada"},
+    'prompt_strength_choose': {'en': "Choose strength level", 'pt': "Escolha a intensidade"},
+    'prompt_camera_title': {'en': "EXIF Metadata & C2PA", 'pt': "Metadados EXIF & C2PA"},
+    'prompt_camera_benefit': {'en': "Anti-Detection Benefit", 'pt': "Benefício Anti-Detecção"},
+    'prompt_camera_s26': {'en': "[bold green]📱 Samsung Galaxy S26 (SM-S948B)[/bold green] (Recommended)", 'pt': "[bold green]📱 Samsung Galaxy S26 (SM-S948B)[/bold green] (Recomendado)"},
+    'prompt_camera_s26_desc': {'en': "Injects authentic smartphone EXIF (f/1.7, ISO 50, One UI) and purges C2PA", 'pt': "Injeta EXIF autêntico de celular real (f/1.7, ISO 50, One UI) e purga C2PA"},
+    'prompt_camera_clean': {'en': "[yellow]🚫 None (Completely Clean)[/yellow]", 'pt': "[yellow]🚫 Nenhum (Completamente Limpo)[/yellow]"},
+    'prompt_camera_clean_desc': {'en': "Purges C2PA and removes all metadata without camera simulation", 'pt': "Purga C2PA e remove todo e qualquer metadado sem injetar câmera"},
+    'prompt_camera_choose': {'en': "Choose metadata profile", 'pt': "Escolha o perfil de metadados"},
+    'prompt_enter_img': {'en': "Image file path", 'pt': "Arquivo da imagem"},
+    'prompt_enter_out': {'en': "Output path (Press Enter to accept default)", 'pt': "Caminho de saída (Pressione Enter para aceitar)"},
+    'prompt_ask_test_detectors': {'en': "\n[bold cyan]🧪 Test result now in AI detectors (ImageDetector, Illuminarty, Sightengine, Hive)?[/bold cyan]", 'pt': "\n[bold cyan]🧪 Deseja verificar agora o resultado nos detectores de IA (ImageDetector, Illuminarty, Sightengine, Hive)?[/bold cyan]"},
+
+    # Batch & Metadata Only
+    'batch_header': {'en': "─── Batch Image Processing ───", 'pt': "─── Processamento em Lote ───"},
+    'batch_prompt_folder': {'en': "Folder containing images (Press Enter for current '.')", 'pt': "Pasta com as imagens (Pressione Enter para pasta atual '.')"},
+    'batch_prompt_out': {'en': "Output folder", 'pt': "Pasta de saída"},
+    'batch_no_images': {'en': "[bold red]Folder not found:[/bold red] {path}", 'pt': "[bold red]Pasta não encontrada:[/bold red] {path}"},
+    'meta_only_header': {'en': "─── Metadata & C2PA Purge (Zero pixel alteration) ───", 'pt': "─── Purga de C2PA/IA & Injeção de EXIF (Sem alterar pixels) ───"},
+    'meta_only_prompt': {'en': "Image or folder path", 'pt': "Arquivo da imagem ou pasta"},
+    'meta_only_ask_test': {'en': "\n[bold cyan]🧪 Verify cleaned file in AI detectors?[/bold cyan]", 'pt': "\n[bold cyan]🧪 Deseja verificar o arquivo nos detectores de IA?[/bold cyan]"},
+
+    # Detectors & Diagnostics
+    'detector_suite_title': {'en': "AI Detector Evasion Benchmark Suite", 'pt': "Diagnóstico de Evasão nos Detectores de IA"},
+    'detector_verdict_human': {'en': "✓ Human (Non-AI)", 'pt': "✓ Humano (Não IA)"},
+    'detector_verdict_ai': {'en': "⚠️ AI Detected", 'pt': "⚠️ IA Detectada"},
+    'detector_no_key': {'en': "Requires API Key", 'pt': "Requer API Key"},
+    'detector_rate_limit': {'en': "Rate Limit (HTTP 429)", 'pt': "Limite Excedido (HTTP 429)"},
+    'detector_analyzing': {'en': "\n[bold cyan]🔍 Analyzing image in AI detectors:[/bold cyan] [bold white]{name}[/bold white]", 'pt': "\n[bold cyan]🔍 Analisando imagem nos detectores de IA:[/bold cyan] [bold white]{name}[/bold white]"},
+    'diag_title': {'en': "─── Tools & Dependencies Diagnostic ───", 'pt': "─── Diagnóstico de Ferramentas e Dependências ───"},
+    'diag_comp': {'en': "Component", 'pt': "Componente"},
+    'diag_status': {'en': "Status", 'pt': "Status"},
+    'diag_details': {'en': "Details / Version", 'pt': "Detalhes / Versão"},
+    'diag_installed': {'en': "✓ Installed", 'pt': "✓ Instalado"},
+    'diag_missing': {'en': "✗ Missing", 'pt': "✗ Ausente"},
+    'diag_active': {'en': "✓ Active ({gpu})", 'pt': "✓ Ativo ({gpu})"},
+    'diag_cpu': {'en': "⚠️ CPU Mode", 'pt': "⚠️ CPU Mode"},
+
+    # Escalation Multiplier
+    'escalation_title': {'en': "─── Configure Escalation Multiplier ───", 'pt': "─── Configurar Fator de Aumento da Escalação ───"},
+    'escalation_param': {'en': "Parameter", 'pt': "Parâmetro"},
+    'escalation_current': {'en': "Current Value", 'pt': "Valor Atual"},
+    'escalation_default': {'en': "Default Value", 'pt': "Valor Default (Padrão)"},
+    'escalation_behavior': {'en': "Behavior", 'pt': "Comportamento"},
+    'escalation_desc': {'en': "Multiplies SDXL diffusion rate, CMOS noise, and filters per retry attempt", 'pt': "Multiplica a taxa de acréscimo de difusão SDXL, ruído CMOS e filtros por tentativa"},
+    'escalation_prompt': {'en': "Enter new multiplier (e.g. 1.0, 1.5, 2.0)", 'pt': "Digite o novo multiplicador (ex: 1.0, 1.5, 2.0)"},
+    'escalation_saved': {'en': "[bold green]Escalation multiplier updated to [bold cyan]{val:.1f}x[/bold cyan]![/bold green]", 'pt': "[bold green]Multiplicador de escalação atualizado para [bold cyan]{val:.1f}x[/bold cyan]![/bold green]"},
+
+    # Iterative & Escalation
+    'iter_success': {'en': "🎉 Total success! All detectors approved the image as Real/Human (Attempt {attempt}/{max_attempts})!", 'pt': "🎉 Sucesso total! Todos os detectores aprovaram a imagem como Real/Humana (Tentativa {attempt}/{max_attempts})!"},
+    'iter_ai_persistent': {'en': "⚠️ AI detection still persistent in: {detectors}", 'pt': "⚠️ Detecção de IA ainda persistente em: {detectors}"},
+    'iter_limit_reached': {'en': "Maximum limit of {max_attempts} attempts reached for this image.", 'pt': "Limite máximo de {max_attempts} tentativas atingido para esta imagem."},
+    'iter_sight_only': {'en': "ℹ️  Only Sightengine detected AI — activating extra anti-Sightengine steps.", 'pt': "ℹ️  Apenas o Sightengine detectou IA — ativando passos anti-Sightengine extras."},
+    'iter_auto_escalate': {'en': "Auto-escalation mode active ({mode}). Applying heavier preset ({multiplier:.1f}x increase | Default: {default_mult:.1f}x) (Attempt {attempt}/{max_attempts})...", 'pt': "Modo auto-escalação ativo ({mode}). Aplicando preset mais pesado ({multiplier:.1f}x de aumento | Default: {default_mult:.1f}x) (Tentativa {attempt}/{max_attempts})..."},
+    'iter_prompt_escalate': {'en': "Would you like to retry with a heavier preset ({multiplier:.1f}x increase | Default: {default_mult:.1f}x) to reduce AI detection? (Attempt {attempt}/{max_attempts} • Mode: {mode})", 'pt': "Deseja tentar com um preset ainda mais pesado ({multiplier:.1f}x de aumento | Default: {default_mult:.1f}x) para diminuir a detecção? (Tentativa {attempt}/{max_attempts} • Modo: {mode})"},
+    'iter_user_ended': {'en': "Escalation attempts ended by user.", 'pt': "Tentativas de escalação encerradas pelo usuário."},
+    'iter_applying': {'en': "⚡ Applying Heavier Preset (Attempt {attempt}/{max_attempts} • Factor: {multiplier:.1f}x)...", 'pt': "⚡ Aplicando Preset Mais Pesado (Tentativa {attempt}/{max_attempts} • Fator: {multiplier:.1f}x)..."},
+    'iter_chain_notice': {'en': "🔗 Chain mode: reprocessing previous output ({name}) instead of original", 'pt': "🔗 Chain mode: reprocessando output anterior ({name}) em vez do original"},
+    'iter_orig_notice': {'en': "📄 Original mode: reprocessing source file ({name})", 'pt': "📄 Modo original: reprocessando arquivo fonte ({name})"},
+    'iter_scaled_name': {'en': "Heavy Scaled (Level {attempt}/5 • {multiplier:.1f}x - {gpu})", 'pt': "Pesado Escalado (Nível {attempt}/5 • {multiplier:.1f}x - {gpu})"},
+    'preset_recommended': {'en': "Default/Recommended", 'pt': "Padrão/Recomendado"},
+
+    # Single Image interactive
+    'single_title': {'en': "─── Process Single Image ───", 'pt': "─── Processar Imagem Única ───"},
+    'single_found_local': {'en': "Images found in current folder:", 'pt': "Imagens encontradas na pasta atual:"},
+    'single_choose_prompt': {'en': "Type image number above or drag-and-drop / paste another file path:", 'pt': "Digite o número da imagem acima ou arraste/cole o caminho de outro arquivo:"},
+    'single_file_not_found': {'en': "File not found: '{path}'. Try again.", 'pt': "Arquivo não encontrado: '{path}'. Tente novamente."},
+    'single_suggested_out': {'en': "Suggested output: {name}", 'pt': "Destino sugerido: {name}"},
+    'single_output_prompt': {'en': "Output path (Press Enter to accept)", 'pt': "Caminho de saída (Pressione Enter para aceitar)"},
+    'single_fail': {'en': "Could not complete processing.", 'pt': "Não foi possível concluir o processamento."},
+
+    # Batch interactive & summary
+    'batch_starting': {'en': "Starting batch: {count} images found.", 'pt': "Iniciando lote: {count} imagens encontradas."},
+    'batch_dest': {'en': "Destination: {path}", 'pt': "Destino: {path}"},
+    'batch_progress_title': {'en': "Batch Progress", 'pt': "Progresso do Lote"},
+    'batch_summary_title': {'en': "Batch Processing Summary", 'pt': "Resumo do Processamento em Lote"},
+    'batch_total_found': {'en': "Total Images Found", 'pt': "Total de Imagens Encontradas"},
+    'batch_success_count': {'en': "Successfully Processed", 'pt': "Processadas com Sucesso"},
+    'batch_fail_count': {'en': "Failures", 'pt': "Falhas"},
+    'batch_exif_col': {'en': "EXIF Camera Profile", 'pt': "Perfil de Câmera EXIF"},
+    'batch_c2pa_col': {'en': "C2PA / AI Credentials", 'pt': "Credenciais C2PA / IA"},
+    'batch_out_col': {'en': "Output Folder", 'pt': "Pasta de Saída"},
+    'batch_purged_val': {'en': "Purged", 'pt': "Purgadas"},
+    'batch_none_exif': {'en': "No EXIF (Clean)", 'pt': "Sem EXIF (Limpo)"},
+
+    # Metadata only
+    'meta_success': {'en': "✓ Metadata successfully processed: {path}", 'pt': "✓ Metadados processados com sucesso: {path}"},
+    'meta_s26_desc': {'en': "C2PA credentials and AI signatures removed. Samsung Galaxy S26 EXIF applied.", 'pt': "Credenciais C2PA e assinaturas de IA removidas. EXIF Samsung Galaxy S26 aplicado."},
+    'meta_clean_desc': {'en': "C2PA credentials and AI signatures purged. Completely anonymous image.", 'pt': "Credenciais C2PA e assinaturas de IA purgadas. Imagem completamente anônima."},
+    'meta_err': {'en': "Error processing image: {err}", 'pt': "Erro ao processar imagem: {err}"},
+    'meta_batch_done': {'en': "✓ Completed! Files saved in: {path}", 'pt': "✓ Concluído! Arquivos salvos em: {path}"},
+
+    # Test detectors interactive
+    'test_det_title': {'en': "─── Test Image in AI Detectors ───", 'pt': "─── Testar Imagem nos Detectores de IA ───"},
+    'test_det_ask_prompt': {'en': "Image file to test", 'pt': "Arquivo da imagem para testar"},
+    'test_det_detected': {'en': "⚠️ Image detected as AI in: {detectors}", 'pt': "⚠️ Imagem detectada como IA em: {detectors}"},
+    'test_det_ask_process': {'en': "Would you like to process this image with De-AI pipeline to make it undetectable?", 'pt': "Deseja processar esta imagem com o pipeline De-AI para torná-la indetectável?"},
+
+    # Language Switch Dialog
+    'lang_dialog_title': {'en': "Select Language / Selecione o Idioma", 'pt': "Selecione o Idioma / Select Language"},
+    'lang_dialog_prompt': {'en': "Choose language (1 for English, 2 for Português)", 'pt': "Escolha o idioma (1 para English, 2 para Português)"},
+}
+
+
+def get_saved_language():
+    """Lê idioma salvo nas preferências; padrão: 'en' (Inglês)"""
+    try:
+        cfg = Path(__file__).resolve().parent / "detector_keys.json"
+        if cfg.exists():
+            with open(cfg, 'r', encoding='utf-8') as f:
+                d = json.load(f)
+                lang = d.get('language')
+                if lang in ('en', 'pt'):
+                    return lang
+    except Exception:
+        pass
+    return 'en'
+
+
+CURRENT_LANG = get_saved_language()
+
+
+def set_language(lang):
+    """Define o idioma do programa ('en' ou 'pt') e persiste na configuração"""
+    global CURRENT_LANG
+    if lang in ('en', 'pt'):
+        CURRENT_LANG = lang
+        keys = AIDetectorChecker.load_keys()
+        keys['language'] = lang
+        AIDetectorChecker.save_keys(keys)
+        if 'ImageDeAIProcessor' in globals() and hasattr(ImageDeAIProcessor, 'refresh_configs'):
+            ImageDeAIProcessor.refresh_configs()
+        return True
+    return False
+
+
+def t(key, **kwargs):
+    """Recupera texto traduzido; padrão inglês com fallback inteligente"""
+    entry = I18N.get(key, {})
+    text = entry.get(CURRENT_LANG) or entry.get('en') or key
+    if kwargs:
+        try:
+            return text.format(**kwargs)
+        except Exception:
+            return text
+    return text
+
+
+# =====================================================================
 # DETECTORES DE IA AUTOMÁTICOS (Illuminarty, AI or Not, Hive)
 # =====================================================================
 
@@ -180,6 +416,7 @@ class AIDetectorChecker:
     @classmethod
     def load_keys(cls):
         keys = {
+            'language': 'en',
             'hive_api_key': os.getenv('HIVE_API_KEY', ''),
             'aiornot_api_key': os.getenv('AIORNOT_API_KEY', ''),
             'illuminarty_api_key': os.getenv('ILLUMINARTY_API_KEY', ''),
@@ -824,59 +1061,67 @@ def configure_escalation_multiplier():
 class ImageDeAIProcessor:
     """Processa imagens geradas por IA para remover padrões e assinaturas de detecção."""
 
-    STRENGTH_CONFIGS = {
-        'light': {
-            'name': 'Leve (Light)',
-            'iso': 50,
-            'fourier_att': 0.65,
-            'phase_jitter': 0.03,
-            'barrel_k': -0.0015,
-            'sss_strength': 0.015,
-            'chroma_k': 0.00025,
-            'vignette_k': 0.02,
-            'shot_scale': 0.00010,
-            'read_scale': 0.00002,
-            'jpeg_quality': 96,
-            'desc': 'Fidelidade máxima com física de sensor CMOS ISO 50 (PSNR ~35 dB)',
-            'bypass_rate': '88% - 94%',
-        },
-        'medium': {
-            'name': 'Médio (Medium)',
-            'iso': 100,
-            'fourier_att': 0.45,
-            'phase_jitter': 0.06,
-            'barrel_k': -0.0025,
-            'sss_strength': 0.030,
-            'chroma_k': 0.00045,
-            'vignette_k': 0.035,
-            'shot_scale': 0.00018,
-            'read_scale': 0.00004,
-            'jpeg_quality': 95,
-            'desc': 'Equilíbrio ideal: física de sensor CMOS + Bayer demosaic + aberração cromática (Recomendado)',
-            'bypass_rate': '94% - 98%',
-        },
-        'heavy': {
-            'name': f'Pesado (Heavy - {GPU_NAME})',
-            'use_purify': True,
-            'purify_strength': 0.24,
-            'purify_steps': 25,
-            'sigma_safe': 1.85,
-            'sigma_edge': 1.0,
-            'purifier_dct_quality': 60,
-            'iso': 100,
-            'fourier_att': 0.22,
-            'phase_jitter': 0.0,
-            'barrel_k': 0.0,
-            'sss_strength': 0.0,
-            'chroma_k': 0.00020,
-            'vignette_k': 0.015,
-            'shot_scale': 0.00023,
-            'read_scale': 0.00004,
-            'jpeg_quality': 97,
-            'desc': 'Purificação SDXL Nativa + Restauração DeSynth Ultra-Fiel + Física CMOS (Evasão Total < 1% IA)',
-            'bypass_rate': '99.0% - 99.9% (Aprovado em Todos)',
+    @classmethod
+    def get_strength_configs(cls):
+        return {
+            'light': {
+                'name': t('preset_light_name'),
+                'iso': 50,
+                'fourier_att': 0.65,
+                'phase_jitter': 0.03,
+                'barrel_k': -0.0015,
+                'sss_strength': 0.015,
+                'chroma_k': 0.00025,
+                'vignette_k': 0.02,
+                'shot_scale': 0.00010,
+                'read_scale': 0.00002,
+                'jpeg_quality': 96,
+                'desc': t('preset_light_desc'),
+                'bypass_rate': '88% - 94%',
+            },
+            'medium': {
+                'name': t('preset_medium_name'),
+                'iso': 100,
+                'fourier_att': 0.45,
+                'phase_jitter': 0.06,
+                'barrel_k': -0.0025,
+                'sss_strength': 0.030,
+                'chroma_k': 0.00045,
+                'vignette_k': 0.035,
+                'shot_scale': 0.00018,
+                'read_scale': 0.00004,
+                'jpeg_quality': 95,
+                'desc': t('preset_medium_desc'),
+                'bypass_rate': '94% - 98%',
+            },
+            'heavy': {
+                'name': t('preset_heavy_name', gpu=GPU_NAME),
+                'use_purify': True,
+                'purify_strength': 0.24,
+                'purify_steps': 25,
+                'sigma_safe': 1.85,
+                'sigma_edge': 1.0,
+                'purifier_dct_quality': 60,
+                'iso': 100,
+                'fourier_att': 0.22,
+                'phase_jitter': 0.0,
+                'barrel_k': 0.0,
+                'sss_strength': 0.0,
+                'chroma_k': 0.00020,
+                'vignette_k': 0.015,
+                'shot_scale': 0.00023,
+                'read_scale': 0.00004,
+                'jpeg_quality': 97,
+                'desc': t('preset_heavy_desc'),
+                'bypass_rate': t('preset_heavy_bypass'),
+            }
         }
-    }
+
+    STRENGTH_CONFIGS = None
+
+    @classmethod
+    def refresh_configs(cls):
+        cls.STRENGTH_CONFIGS = cls.get_strength_configs()
 
     def __init__(self, input_path, output_path=None, strength='medium', camera='samsung_s26', verbose=False, use_purify=None):
         self.input_path = Path(input_path)
@@ -944,7 +1189,7 @@ class ImageDeAIProcessor:
         base['micro_elastic_warp'] = 0.0
         base['purifier_dct_quality'] = 60
 
-        base['name'] = f"Pesado Escalado (Nível {attempt}/5 • {multiplier:.1f}x - {GPU_NAME})"
+        base['name'] = t('iter_scaled_name', attempt=attempt, multiplier=multiplier, gpu=GPU_NAME)
 
         self.config = base
         if HAS_CUDA and SDXLPurifier is not None and self.purifier is None:
@@ -1398,7 +1643,7 @@ class ImageDeAIProcessor:
             self.original_size = self.input_path.stat().st_size
 
             # Etapa 1: Purgar metadados e credenciais C2PA
-            update_step(1, 6, "Purgando metadados de IA e credenciais C2PA")
+            update_step(1, 6, t('step1_purge_meta'))
             self.remove_metadata()
 
             # Carregar imagem
@@ -1409,7 +1654,7 @@ class ImageDeAIProcessor:
 
             # Purificação por difusão SDXL + Restauração DeSynth (se ativado)
             if self.purifier and self.use_purify:
-                update_step(2, 6, f"Purificação SDXL Nativa & Restauração DeSynth ({GPU_NAME} - Anula SynthID)")
+                update_step(2, 6, t('step2_purify_sdxl', gpu=GPU_NAME))
                 orig_h, orig_w = img_bgr.shape[:2]
                 needs_upscale = (orig_w < 1200 or orig_h < 1800)
                 if needs_upscale:
@@ -1436,8 +1681,8 @@ class ImageDeAIProcessor:
                 )
 
                 if self.gpu_engine:
-                    update_step(4, 6, "Demosaicing Bayer real & restauração MTF óptico (GPU)")
-                    update_step(5, 6, "Dispersão cromática lateral e vinheta óptica (Samsung S26)")
+                    update_step(4, 6, t('step3_cmos_bayer'))
+                    update_step(5, 6, t('step4_optics'))
                     work_img = self.gpu_engine.process(
                         work_img,
                         iso=self.config.get('iso', 100),
@@ -1456,12 +1701,13 @@ class ImageDeAIProcessor:
                 else:
                     img_bgr = work_img
 
-                label_s6 = "Injetando EXIF Galaxy S26 e salvando" if self.camera == 'samsung_s26' else "Salvando arquivo limpo"
+                label_s6 = t('step6_save_s26') if self.camera == 'samsung_s26' else t('step6_save_clean')
                 update_step(6, 6, label_s6)
             elif self.gpu_engine:
-                update_step(3, 6, "Inversão ISP RAW & física de sensor CMOS heteroscedástica (GPU)")
-                update_step(4, 6, "Demosaicing Bayer real & restauração MTF óptico (GPU)")
-                update_step(5, 6, "Dispersão cromática lateral e vinheta óptica (Samsung S26)")
+                s3_label = "ISP RAW inversion & heteroscedastic CMOS sensor physics (GPU)" if CURRENT_LANG == 'en' else "Inversão ISP RAW & física de sensor CMOS heteroscedástica (GPU)"
+                update_step(3, 6, s3_label)
+                update_step(4, 6, t('step3_cmos_bayer'))
+                update_step(5, 6, t('step4_optics'))
                 img_bgr = self.gpu_engine.process(
                     img_bgr,
                     iso=self.config.get('iso', 100),
@@ -1474,27 +1720,31 @@ class ImageDeAIProcessor:
                     shot_scale=self.config.get('shot_scale', 0.00012),
                     read_scale=self.config.get('read_scale', 0.00002)
                 )
-                label_s6 = "Injetando EXIF Galaxy S26 e salvando" if self.camera == 'samsung_s26' else "Salvando arquivo limpo"
+                label_s6 = t('step6_save_s26') if self.camera == 'samsung_s26' else t('step6_save_clean')
                 update_step(6, 6, label_s6)
             else:
                 # Etapa 2: Neutralização espectral Fourier dos harmônicos de VAE
-                update_step(2, 6, "Neutralização espectral Fourier de harmônicos VAE")
+                s2_label = "Fourier spectral neutralization of VAE harmonics" if CURRENT_LANG == 'en' else "Neutralização espectral Fourier de harmônicos VAE"
+                update_step(2, 6, s2_label)
                 img_bgr = self.fourier_vae_notch(img_bgr)
 
                 # Etapa 3: Inversão ISP para dados RAW Bayer
-                update_step(3, 6, "Inversão ISP para dados RAW Bayer (Brooks et al.)")
+                s3_label = "ISP inversion to Bayer RAW data (Brooks et al.)" if CURRENT_LANG == 'en' else "Inversão ISP para dados RAW Bayer (Brooks et al.)"
+                update_step(3, 6, s3_label)
                 raw_bayer, gains, M_matrix, shape, pads = self.unprocess_srgb_to_raw(img_bgr)
 
                 # Etapa 4: Emulação física de sensor CMOS
-                update_step(4, 6, "Emulação física de sensor CMOS (Poisson shot noise + PRNU)")
+                s4_label = "CMOS sensor physics emulation (Poisson shot noise + PRNU)" if CURRENT_LANG == 'en' else "Emulação física de sensor CMOS (Poisson shot noise + PRNU)"
+                update_step(4, 6, s4_label)
                 noisy_bayer = self.emulate_sensor_physics(raw_bayer)
 
                 # Etapa 5: Re-processamento ISP com demosaicing Bayer real
-                update_step(5, 6, "Re-processamento ISP com demosaicing Bayer real")
+                s5_label = "ISP re-processing with real Bayer demosaicing" if CURRENT_LANG == 'en' else "Re-processamento ISP com demosaicing Bayer real"
+                update_step(5, 6, s5_label)
                 img_bgr = self.reprocess_raw_to_srgb(noisy_bayer, gains, M_matrix, shape, pads)
 
                 # Etapa 6: Óptica física de lente e injeção Samsung Galaxy S26
-                label_s6 = "Óptica física e injeção EXIF Galaxy S26" if self.camera == 'samsung_s26' else "Óptica física e salvamento"
+                label_s6 = ("Physical optics and Galaxy S26 EXIF injection" if self.camera == 'samsung_s26' else "Physical optics and saving") if CURRENT_LANG == 'en' else ("Óptica física e injeção EXIF Galaxy S26" if self.camera == 'samsung_s26' else "Óptica física e salvamento")
                 update_step(6, 6, label_s6)
                 img_bgr = self.apply_optical_physics(img_bgr)
 
@@ -1535,7 +1785,8 @@ class ImageDeAIProcessor:
             return True
 
         except Exception as e:
-            console.print(f"[bold red]Falha no processamento de {self.input_path.name}:[/bold red] {e}")
+            err_lbl = "Processing failed for" if CURRENT_LANG == 'en' else "Falha no processamento de"
+            console.print(f"[bold red]{err_lbl} {self.input_path.name}:[/bold red] {e}")
             return False
 
         finally:
@@ -1556,34 +1807,39 @@ class ImageDeAIProcessor:
             size_diff_str = "N/A"
 
         table = Table(box=box.ROUNDED, show_header=False, expand=True)
-        table.add_column("Propriedade", style="bold cyan", width=24)
-        table.add_column("Detalhe", style="white")
+        table.add_column("Prop", style="bold cyan", width=24)
+        table.add_column("Val", style="white")
 
-        table.add_row("Arquivo de Entrada", f"[bold]{self.input_path.name}[/bold] ([dim]{self.input_path}[/dim])")
-        table.add_row("Arquivo de Saída", f"[bold green]{self.output_path.name}[/bold green] ([dim]{self.output_path}[/dim])")
-        table.add_row("Tamanho Original", f"{self.original_size / 1024:.1f} KB")
-        table.add_row("Tamanho Final", f"{self.processed_size / 1024:.1f} KB ({size_diff_str})")
-        table.add_row("Perfil Visual", f"[magenta]{self.config['name']}[/magenta] (Bypass est.: [bold]{self.config['bypass_rate']}[/bold])")
+        table.add_row(t('sum_input_file'), f"[bold]{self.input_path.name}[/bold] ([dim]{self.input_path}[/dim])")
+        table.add_row(t('sum_output_file'), f"[bold green]{self.output_path.name}[/bold green] ([dim]{self.output_path}[/dim])")
+        table.add_row(t('sum_orig_size'), f"{self.original_size / 1024:.1f} KB")
+        table.add_row(t('sum_final_size'), f"{self.processed_size / 1024:.1f} KB ({size_diff_str})")
+        table.add_row(t('sum_profile'), f"[magenta]{self.config['name']}[/magenta] ({t('prompt_est_bypass')}: [bold]{self.config['bypass_rate']}[/bold])")
 
         if self.camera == 'samsung_s26':
             camera_detail = (
+                "[bold green]📱 Samsung Galaxy S26 (SM-S948B)[/bold green]\n"
+                "[dim]• Lens: 24mm f/1.7 | ISO 50 | Exp 1/120s | sRGB[/dim]\n"
+                "[dim]• Software: Samsung One UI (S948BXXU1AXB3)[/dim]"
+            ) if CURRENT_LANG == 'en' else (
                 "[bold green]📱 Samsung Galaxy S26 (SM-S948B)[/bold green]\n"
                 "[dim]• Lente: 24mm f/1.7 | ISO 50 | Exp 1/120s | sRGB[/dim]\n"
                 "[dim]• Software: Samsung One UI (S948BXXU1AXB3)[/dim]"
             )
         else:
-            camera_detail = "[yellow]Sem Metadados (Arquivo completamente anônimo)[/yellow]"
-        table.add_row("Câmera / EXIF Simulado", camera_detail)
+            camera_detail = "[yellow]Clean / No Metadata (Completely anonymous file)[/yellow]" if CURRENT_LANG == 'en' else "[yellow]Sem Metadados (Arquivo completamente anônimo)[/yellow]"
+        table.add_row(t('sum_camera'), camera_detail)
 
-        c2pa_status = "[bold green]✓ Purgadas e Inexistentes[/bold green] (Arquivo novo sem manifests JUMBF)"
-        table.add_row("Credenciais C2PA / IA", c2pa_status)
+        table.add_row(t('sum_c2pa'), t('sum_c2pa_desc'))
 
-        accel_info = f"[bold green]🚀 {CUDA_DEVICE_NAME} (PyTorch CUDA)[/bold green]" if self.gpu_engine else "[yellow]CPU OpenCV (Modo compatibilidade)[/yellow]"
-        table.add_row("Aceleração de Hardware", accel_info)
+        accel_info = f"[bold green]🚀 {CUDA_DEVICE_NAME} (PyTorch CUDA)[/bold green]" if self.gpu_engine else (
+            "[yellow]CPU OpenCV (Compatibility Mode)[/yellow]" if CURRENT_LANG == 'en' else "[yellow]CPU OpenCV (Modo compatibilidade)[/yellow]"
+        )
+        table.add_row(t('sum_accel'), accel_info)
 
         table.add_row(
-            "ExifTool",
-            "[green]Disponível (Purga profunda de tags avançadas e injeção completa)[/green]" if self.used_exiftool else "[yellow]Não encontrado (Pillow injetou EXIF nativo perfeitamente)[/yellow]"
+            t('sum_exiftool'),
+            f"[green]{t('sum_exiftool_found')}[/green]" if self.used_exiftool else f"[yellow]{t('sum_exiftool_native')}[/yellow]"
         )
 
         detector_table = Table(box=box.SIMPLE, show_header=True, expand=True)
@@ -1596,24 +1852,29 @@ class ImageDeAIProcessor:
 
         report_content = [
             table,
-            Text("\n🔗 Detectores Suportados para Verificação:", style="bold white"),
+            Text(t('sum_detectors_title'), style="bold white"),
             detector_table,
         ]
 
         console.print(Panel(
             Group(*report_content),
-            title="[bold green]✓ Processamento Concluído com Sucesso![/bold green]",
+            title=f"[bold green]{t('summary_box_title')}[/bold green]",
             border_style="green",
             box=box.ROUNDED,
             expand=False,
         ))
 
 
+# Inicializa as configurações de intensidade do processador com o idioma ativo
+ImageDeAIProcessor.refresh_configs()
+
+
 def metadata_only_mode(input_path, output_path=None, camera='samsung_s26'):
     """Purga metadados/C2PA de IA e opcionalmente injeta EXIF do Galaxy S26 sem alterar pixels"""
     in_path = Path(input_path)
     if not in_path.exists():
-        console.print(f"[bold red]Erro:[/bold red] Arquivo não encontrado: {input_path}")
+        err_msg = f"File not found: {input_path}" if CURRENT_LANG == 'en' else f"Arquivo não encontrado: {input_path}"
+        console.print(f"[bold red]Error / Erro:[/bold red] {err_msg}")
         return False
 
     out_path = Path(output_path) if output_path else in_path.parent / f"{in_path.stem}_s26{in_path.suffix}"
@@ -1651,15 +1912,15 @@ def metadata_only_mode(input_path, output_path=None, camera='samsung_s26'):
                 ]
                 subprocess.run(cmd, check=True, capture_output=True)
 
-        console.print(f"[bold green]✓ Metadados processados com sucesso:[/bold green] {out_path}")
+        console.print(f"[bold green]{t('meta_success', path=out_path)}[/bold green]")
         if camera == 'samsung_s26':
-            console.print("[dim]Credenciais C2PA e assinaturas de IA removidas. EXIF Samsung Galaxy S26 aplicado.[/dim]")
+            console.print(f"[dim]{t('meta_s26_desc')}[/dim]")
         else:
-            console.print("[dim]Credenciais C2PA e assinaturas de IA purgadas. Imagem completamente anônima.[/dim]")
+            console.print(f"[dim]{t('meta_clean_desc')}[/dim]")
         return True
 
     except Exception as e:
-        console.print(f"[bold red]Erro ao processar imagem:[/bold red] {e}")
+        console.print(f"[bold red]{t('meta_err', err=e)}[/bold red]")
         return False
 
 
@@ -1667,7 +1928,7 @@ def batch_process(input_dir, output_dir=None, strength='medium', camera='samsung
     """Processamento em lote de um diretório com barra de progresso Rich"""
     in_dir = Path(input_dir)
     if not in_dir.is_dir():
-        console.print(f"[bold red]Erro:[/bold red] O caminho '{input_dir}' não é um diretório válido.")
+        console.print(t('batch_no_images', path=input_dir))
         return False
 
     extensions = ['*.jpg', '*.jpeg', '*.png', '*.webp', '*.JPG', '*.JPEG', '*.PNG', '*.WEBP']
@@ -1677,14 +1938,15 @@ def batch_process(input_dir, output_dir=None, strength='medium', camera='samsung
 
     image_files = sorted(list(set(image_files)))
     if not image_files:
-        console.print(f"[bold yellow]Aviso:[/bold yellow] Nenhuma imagem encontrada em {in_dir}")
+        msg = f"No images found in {in_dir}" if CURRENT_LANG == 'en' else f"Nenhuma imagem encontrada em {in_dir}"
+        console.print(f"[bold yellow]Warning / Aviso:[/bold yellow] {msg}")
         return False
 
     out_dir = Path(output_dir) if output_dir else in_dir / "deai_output"
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    console.print(f"\n[bold cyan]Iniciando lote:[/bold cyan] {len(image_files)} imagens encontradas.")
-    console.print(f"[dim]Destino: {out_dir}[/dim]\n")
+    console.print(f"\n[bold cyan]{t('batch_starting', count=len(image_files))}[/bold cyan]")
+    console.print(f"[dim]{t('batch_dest', path=out_dir)}[/dim]\n")
 
     success_count = 0
 
@@ -1696,7 +1958,7 @@ def batch_process(input_dir, output_dir=None, strength='medium', camera='samsung
         TimeRemainingColumn(),
         console=console,
     ) as progress:
-        batch_task = progress.add_task("[bold green]Progresso do Lote[/bold green]", total=len(image_files))
+        batch_task = progress.add_task(f"[bold green]{t('batch_progress_title')}[/bold green]", total=len(image_files))
 
         for img_file in image_files:
             output_file = out_dir / f"{img_file.stem}_deai.jpg"
@@ -1710,15 +1972,15 @@ def batch_process(input_dir, output_dir=None, strength='medium', camera='samsung
                 success_count += 1
             progress.advance(batch_task)
 
-    summary_table = Table(title="Resumo do Processamento em Lote", box=box.ROUNDED)
-    summary_table.add_column("Métrica", style="bold cyan")
-    summary_table.add_column("Valor", style="white")
-    summary_table.add_row("Total de Imagens Encontradas", str(len(image_files)))
-    summary_table.add_row("Processadas com Sucesso", f"[green]{success_count}[/green]")
-    summary_table.add_row("Falhas", f"[red]{len(image_files) - success_count}[/red]" if len(image_files) > success_count else "0")
-    summary_table.add_row("Perfil de Câmera EXIF", "Samsung Galaxy S26 (SM-S948B)" if camera == 'samsung_s26' else "Sem EXIF (Limpo)")
-    summary_table.add_row("Credenciais C2PA / IA", "[green]Purgadas[/green]")
-    summary_table.add_row("Pasta de Saída", str(out_dir.resolve()))
+    summary_table = Table(title=t('batch_summary_title'), box=box.ROUNDED)
+    summary_table.add_column(t('escalation_param') if CURRENT_LANG == 'pt' else "Metric", style="bold cyan")
+    summary_table.add_column(t('escalation_current') if CURRENT_LANG == 'pt' else "Value", style="white")
+    summary_table.add_row(t('batch_total_found'), str(len(image_files)))
+    summary_table.add_row(t('batch_success_count'), f"[green]{success_count}[/green]")
+    summary_table.add_row(t('batch_fail_count'), f"[red]{len(image_files) - success_count}[/red]" if len(image_files) > success_count else "0")
+    summary_table.add_row(t('batch_exif_col'), "Samsung Galaxy S26 (SM-S948B)" if camera == 'samsung_s26' else t('batch_none_exif'))
+    summary_table.add_row(t('batch_c2pa_col'), f"[green]{t('batch_purged_val')}[/green]")
+    summary_table.add_row(t('batch_out_col'), str(out_dir.resolve()))
 
     console.print(summary_table)
     return True
@@ -1741,10 +2003,10 @@ def render_banner():
     """Renderiza o cabeçalho estilizado do programa"""
     banner_text = Text()
     banner_text.append("🛡️  AI IMAGE DE-FINGERPRINT TOOL  🛡️\n", style="bold cyan")
-    banner_text.append("Anti-Detecção • C2PA Purge • EXIF Galaxy S26 • Auto-Checkers • v1.4", style="dim white")
+    banner_text.append(t('banner_subtitle'), style="dim white")
     if HAS_CUDA:
         vram_str = f" ({GPU_VRAM_GB:.1f} GB VRAM)" if GPU_VRAM_GB else ""
-        banner_text.append(f"\n🚀 Acelerador GPU: {GPU_NAME}{vram_str} - Simulação Óptica Ativa", style="bold green")
+        banner_text.append(t('banner_gpu', gpu=GPU_NAME, vram=vram_str), style="bold green")
 
     console.print(Panel(
         banner_text,
@@ -1757,15 +2019,15 @@ def render_banner():
 
 def prompt_strength():
     """Menu interativo para escolha do nível de intensidade"""
-    table = Table(title="Selecione o Nível de Intensidade", box=box.ROUNDED, expand=False)
-    table.add_column("Opção", justify="center", style="bold yellow")
-    table.add_column("Nível", style="bold")
-    table.add_column("Descrição", style="dim")
-    table.add_column("Evasão Estimada", justify="center", style="green")
+    table = Table(title=t('prompt_strength_title'), box=box.ROUNDED, expand=False)
+    table.add_column(t('col_option'), justify="center", style="bold yellow")
+    table.add_column(t('prompt_level'), style="bold")
+    table.add_column(t('col_description'), style="dim")
+    table.add_column(t('prompt_est_bypass'), justify="center", style="green")
 
     for key, num, color in [('light', '1', 'blue'), ('medium', '2', 'cyan'), ('heavy', '3', 'magenta')]:
         cfg = ImageDeAIProcessor.STRENGTH_CONFIGS[key]
-        tag = " (Padrão/Recomendado)" if key == 'medium' else ""
+        tag = f" ({t('preset_recommended')})" if key == 'medium' else ""
         table.add_row(
             num,
             f"[{color}]{cfg['name']}{tag}[/{color}]",
@@ -1774,31 +2036,31 @@ def prompt_strength():
         )
 
     console.print(table)
-    choice = Prompt.ask("Escolha a intensidade", choices=["1", "2", "3"], default="2")
+    choice = Prompt.ask(t('prompt_strength_choose'), choices=["1", "2", "3"], default="2")
     mapping = {"1": "light", "2": "medium", "3": "heavy"}
     return mapping[choice]
 
 
 def prompt_camera_profile():
     """Menu interativo para escolha do perfil de metadados EXIF"""
-    table = Table(title="Metadados EXIF & C2PA", box=box.ROUNDED, expand=False)
-    table.add_column("Opção", justify="center", style="bold yellow")
-    table.add_column("Perfil", style="bold")
-    table.add_column("Benefício Anti-Detecção", style="dim")
+    table = Table(title=t('prompt_camera_title'), box=box.ROUNDED, expand=False)
+    table.add_column(t('col_option'), justify="center", style="bold yellow")
+    table.add_column(t('sum_camera'), style="bold")
+    table.add_column(t('prompt_camera_benefit'), style="dim")
 
     table.add_row(
         "1",
-        "[bold green]📱 Samsung Galaxy S26 (SM-S948B)[/bold green] (Recomendado)",
-        "Injeta EXIF autêntico de celular real (f/1.7, ISO 50, One UI) e purga C2PA"
+        t('prompt_camera_s26'),
+        t('prompt_camera_s26_desc')
     )
     table.add_row(
         "2",
-        "[yellow]🚫 Nenhum (Completamente Limpo)[/yellow]",
-        "Purga C2PA e remove todo e qualquer metadado sem injetar câmera"
+        t('prompt_camera_clean'),
+        t('prompt_camera_clean_desc')
     )
 
     console.print(table)
-    choice = Prompt.ask("Escolha o perfil de metadados", choices=["1", "2"], default="1")
+    choice = Prompt.ask(t('prompt_camera_choose'), choices=["1", "2"], default="1")
     return "samsung_s26" if choice == "1" else "none"
 
 
@@ -1843,7 +2105,8 @@ def run_iterative_deai(processor, initial_done=False, max_attempts=5, auto_escal
             task = progress.add_task(f"[bold cyan]{processor.input_path.name}[/bold cyan]", total=6)
             success = processor.process(progress=progress, task_id=task)
         if not success:
-            console.print("[bold red]Falha no processamento da imagem.[/bold red]")
+            err_msg = "Image processing failed." if CURRENT_LANG == 'en' else "Falha no processamento da imagem."
+            console.print(f"[bold red]{err_msg}[/bold red]")
             return False
         processor.print_report()
 
@@ -1852,14 +2115,14 @@ def run_iterative_deai(processor, initial_done=False, max_attempts=5, auto_escal
         detected_list = AIDetectorChecker.check_any_ai_detected(results)
 
         if not detected_list:
-            console.print(f"\n[bold green]🎉 Sucesso total! Todos os detectores aprovaram a imagem como Real/Humana (Tentativa {attempt}/{max_attempts})![/bold green]")
+            console.print(f"\n[bold green]{t('iter_success', attempt=attempt, max_attempts=max_attempts)}[/bold green]")
             return True
 
         det_names = ", ".join(f"[bold red]{d[0]}[/bold red] ({d[1]})" for d in detected_list)
-        console.print(f"\n[bold yellow]⚠️ Detecção de IA ainda persistente em:[/bold yellow] {det_names}")
+        console.print(f"\n[bold yellow]{t('iter_ai_persistent', detectors=det_names)}[/bold yellow]")
 
         if attempt >= max_attempts:
-            console.print(f"\n[yellow]Limite máximo de {max_attempts} tentativas atingido para esta imagem.[/yellow]")
+            console.print(f"\n[yellow]{t('iter_limit_reached', max_attempts=max_attempts)}[/yellow]")
             return False
 
         next_attempt = attempt + 1
@@ -1868,42 +2131,41 @@ def run_iterative_deai(processor, initial_done=False, max_attempts=5, auto_escal
         # Verificar se apenas o Sightengine está detectando
         sight_only = all(d[0] == 'Sightengine' for d in detected_list)
         if sight_only:
-            console.print("[dim]ℹ️  Apenas o Sightengine detectou IA — ativando passos anti-Sightengine extras.[/dim]")
+            console.print(f"[dim]{t('iter_sight_only')}[/dim]")
 
         if auto_escalate:
-            mode_label = "Chain" if chain_mode else "Original"
-            console.print(f"\n[cyan]Modo auto-escalação ativo ({mode_label}). Aplicando preset mais pesado ({multiplier:.1f}x de aumento | Default: {DEFAULT_MULT:.1f}x) (Tentativa {next_attempt}/{max_attempts})...[/cyan]")
+            mode_label = "Chain" if chain_mode else ("Original" if CURRENT_LANG == 'en' else "Do Original")
+            console.print(f"\n[cyan]{t('iter_auto_escalate', mode=mode_label, multiplier=multiplier, default_mult=DEFAULT_MULT, attempt=next_attempt, max_attempts=max_attempts)}[/cyan]")
             should_retry = True
         else:
-            mode_label = "[green]encadeado (output→input)[/green]" if chain_mode else "[yellow]do original[/yellow]"
-            msg = (
-                f"\n[bold cyan]Deseja tentar com um preset ainda mais pesado "
-                f"({multiplier:.1f}x de aumento | Default: {DEFAULT_MULT:.1f}x) "
-                f"para diminuir a detecção? (Tentativa {next_attempt}/{max_attempts} • Modo: {mode_label})[/bold cyan]"
-            )
+            mode_label = "[green]Chain (output→input)[/green]" if chain_mode else ("[yellow]Original Source[/yellow]" if CURRENT_LANG == 'en' else "[yellow]do original[/yellow]")
+            msg = f"\n[bold cyan]{t('iter_prompt_escalate', multiplier=multiplier, default_mult=DEFAULT_MULT, attempt=next_attempt, max_attempts=max_attempts, mode=mode_label)}[/bold cyan]"
             should_retry = Confirm.ask(msg, default=True)
 
         if not should_retry:
-            console.print("[dim]Tentativas de escalação encerradas pelo usuário.[/dim]")
+            console.print(f"[dim]{t('iter_user_ended')}[/dim]")
             return False
 
         attempt = next_attempt
-        console.print(f"\n[bold yellow]⚡ Aplicando Preset Mais Pesado (Tentativa {attempt}/{max_attempts} • Fator: {multiplier:.1f}x)...[/bold yellow]")
+        console.print(f"\n[bold yellow]{t('iter_applying', attempt=attempt, max_attempts=max_attempts, multiplier=multiplier)}[/bold yellow]")
         processor.escalate_config(attempt, multiplier=multiplier)
 
         # Chain mode: usar output anterior como input para a próxima passada
         if chain_mode and processor.output_path.exists():
             processor.input_path = processor.output_path
-            console.print(f"[dim]🔗 Chain mode: reprocessando output anterior ({processor.input_path.name}) em vez do original[/dim]")
+            console.print(f"[dim]{t('iter_chain_notice', name=processor.input_path.name)}[/dim]")
         else:
             processor.input_path = original_input_path
-            console.print(f"[dim]📄 Modo original: reprocessando arquivo fonte ({processor.input_path.name})[/dim]")
+            console.print(f"[dim]{t('iter_orig_notice', name=processor.input_path.name)}[/dim]")
 
+        diff_lbl = "SDXL Diffusion Strength" if CURRENT_LANG == 'en' else "Força Difusão SDXL"
+        four_lbl = "Fourier Filter" if CURRENT_LANG == 'en' else "Filtro Fourier"
+        sens_lbl = "Sensor Noise" if CURRENT_LANG == 'en' else "Ruído Sensor"
         console.print(
-            f"[dim]Parâmetros escalados ({multiplier:.1f}x • Default {DEFAULT_MULT:.1f}x): "
-            f"Força Difusão SDXL: {processor.config.get('purify_strength', 0.24):.2f} | "
-            f"Filtro Fourier: {processor.config.get('fourier_att', 0.22):.2f} | "
-            f"Ruído Sensor: {processor.config.get('shot_scale', 0.00023):.5f} | "
+            f"[dim]Parameters ({multiplier:.1f}x • Default {DEFAULT_MULT:.1f}x): "
+            f"{diff_lbl}: {processor.config.get('purify_strength', 0.24):.2f} | "
+            f"{four_lbl}: {processor.config.get('fourier_att', 0.22):.2f} | "
+            f"{sens_lbl}: {processor.config.get('shot_scale', 0.00023):.5f} | "
             f"JPEG: Q{processor.config.get('jpeg_quality', 97)}"
             f"{' | Rescale: ±' + str(round(processor.config.get('stochastic_rescale', 0)*100, 1)) + '%' if processor.config.get('stochastic_rescale', 0) > 0 else ''}"
             f"{' | YCbCr: ' + str(processor.config.get('color_jitter_ycbcr', 0)) if processor.config.get('color_jitter_ycbcr', 0) > 0 else ''}"
@@ -1918,12 +2180,13 @@ def run_iterative_deai(processor, initial_done=False, max_attempts=5, auto_escal
             TaskProgressColumn(),
             console=console,
         ) as progress:
-            task = progress.add_task(f"[bold cyan]{processor.input_path.name} (Tentativa {attempt}/{max_attempts})[/bold cyan]", total=6)
+            attempt_lbl = f"({t('col_action') if CURRENT_LANG == 'pt' else 'Attempt'} {attempt}/{max_attempts})"
+            task = progress.add_task(f"[bold cyan]{processor.input_path.name} {attempt_lbl}[/bold cyan]", total=6)
             success = processor.process(progress=progress, task_id=task)
 
         if not success:
-            console.print(f"[bold red]Falha ao processar na tentativa {attempt}.[/bold red]")
-            # Em caso de falha no chain mode, tentar reverter para o original
+            err_att = f"Failed processing on attempt {attempt}." if CURRENT_LANG == 'en' else f"Falha ao processar na tentativa {attempt}."
+            console.print(f"[bold red]{err_att}[/bold red]")
             if chain_mode:
                 processor.input_path = original_input_path
             return False
@@ -1935,27 +2198,27 @@ def run_iterative_deai(processor, initial_done=False, max_attempts=5, auto_escal
 
 def interactive_single_image():
     """Fluxo interativo para processamento de imagem única"""
-    console.print("\n[bold cyan]─── Processar Imagem Única ───[/bold cyan]")
+    console.print(f"\n[bold cyan]{t('single_title')}[/bold cyan]")
 
     local_images = find_local_images()
     selected_path = None
 
     if local_images:
-        console.print("[dim]Imagens encontradas na pasta atual:[/dim]")
+        console.print(f"[dim]{t('single_found_local')}[/dim]")
         img_table = Table(box=box.SIMPLE, show_header=True)
         img_table.add_column("#", style="bold yellow", width=4)
-        img_table.add_column("Arquivo", style="white")
-        img_table.add_column("Tamanho", style="dim")
+        img_table.add_column(t('sum_input_file') if CURRENT_LANG == 'pt' else "File", style="white")
+        img_table.add_column(t('sum_orig_size') if CURRENT_LANG == 'pt' else "Size", style="dim")
 
         for idx, img_p in enumerate(local_images, 1):
             size_kb = img_p.stat().st_size / 1024
             img_table.add_row(str(idx), img_p.name, f"{size_kb:.1f} KB")
 
         console.print(img_table)
-        console.print("[dim]Digite o número da imagem acima ou arraste/cole o caminho de outro arquivo:[/dim]")
+        console.print(f"[dim]{t('single_choose_prompt')}[/dim]")
 
     while not selected_path:
-        user_input = Prompt.ask("Arquivo da imagem").strip()
+        user_input = Prompt.ask(t('prompt_enter_img')).strip()
         if not user_input:
             continue
 
@@ -1969,14 +2232,14 @@ def interactive_single_image():
             selected_path = cand
             break
         else:
-            console.print(f"[bold red]Arquivo não encontrado:[/bold red] '{cleaned}'. Tente novamente.")
+            console.print(f"[bold red]{t('single_file_not_found', path=cleaned)}[/bold red]")
 
     strength = prompt_strength()
     camera = prompt_camera_profile()
 
     default_out = selected_path.parent / f"{selected_path.stem}_deai.jpg"
-    console.print(f"\n[dim]Destino sugerido: {default_out.name}[/dim]")
-    out_input = Prompt.ask("Caminho de saída (Pressione Enter para aceitar)", default=str(default_out)).strip()
+    console.print(f"\n[dim]{t('single_suggested_out', name=default_out.name)}[/dim]")
+    out_input = Prompt.ask(t('single_output_prompt'), default=str(default_out)).strip()
     out_path = Path(clean_input_path(out_input))
 
     console.print()
@@ -1995,28 +2258,28 @@ def interactive_single_image():
     if success:
         processor.print_report()
         # Pergunta se deseja rodar os detectores de IA com suporte a escalação automática
-        if Confirm.ask("\n[bold cyan]🧪 Deseja verificar agora o resultado nos detectores de IA (ImageDetector, Illuminarty, Sightengine, Hive)?[/bold cyan]", default=True):
+        if Confirm.ask(t('prompt_ask_test_detectors'), default=True):
             run_iterative_deai(processor, initial_done=True, max_attempts=5, auto_escalate=False)
     else:
-        console.print("[bold red]Não foi possível concluir o processamento.[/bold red]")
+        console.print(f"[bold red]{t('single_fail')}[/bold red]")
 
 
 def interactive_batch():
     """Fluxo interativo para processamento em lote"""
-    console.print("\n[bold cyan]─── Processamento em Lote ───[/bold cyan]")
+    console.print(f"\n[bold cyan]{t('batch_header')}[/bold cyan]")
 
-    dir_input = Prompt.ask("Pasta com as imagens (Pressione Enter para pasta atual '.')", default=".").strip()
+    dir_input = Prompt.ask(t('batch_prompt_folder'), default=".").strip()
     dir_path = Path(clean_input_path(dir_input))
 
     if not dir_path.is_dir():
-        console.print(f"[bold red]Pasta não encontrada:[/bold red] {dir_path}")
+        console.print(t('batch_no_images', path=dir_path))
         return
 
     strength = prompt_strength()
     camera = prompt_camera_profile()
 
     default_out = dir_path / "deai_output"
-    out_input = Prompt.ask("Pasta de saída", default=str(default_out)).strip()
+    out_input = Prompt.ask(t('batch_prompt_out'), default=str(default_out)).strip()
     out_path = Path(clean_input_path(out_input))
 
     batch_process(dir_path, out_path, strength=strength, camera=camera)
@@ -2024,21 +2287,22 @@ def interactive_batch():
 
 def interactive_metadata_only():
     """Fluxo interativo para purga de C2PA/IA e injeção de EXIF sem reprocessar pixels"""
-    console.print("\n[bold cyan]─── Purga de C2PA/IA & Injeção de EXIF (Sem alterar pixels) ───[/bold cyan]")
-    user_input = Prompt.ask("Arquivo da imagem ou pasta").strip()
+    console.print(f"\n[bold cyan]{t('meta_only_header')}[/bold cyan]")
+    user_input = Prompt.ask(t('meta_only_prompt')).strip()
     target = Path(clean_input_path(user_input))
 
     if not target.exists():
-        console.print(f"[bold red]Caminho não encontrado:[/bold red] {target}")
+        err_msg = f"Path not found: {target}" if CURRENT_LANG == 'en' else f"Caminho não encontrado: {target}"
+        console.print(f"[bold red]{err_msg}[/bold red]")
         return
 
     camera = prompt_camera_profile()
 
     if target.is_file():
         default_out = target.parent / f"{target.stem}_s26{target.suffix}"
-        out_input = Prompt.ask("Caminho de saída", default=str(default_out)).strip()
+        out_input = Prompt.ask(t('single_output_prompt'), default=str(default_out)).strip()
         metadata_only_mode(target, clean_input_path(out_input), camera=camera)
-        if Confirm.ask("\n[bold cyan]🧪 Deseja verificar o arquivo nos detectores de IA?[/bold cyan]", default=True):
+        if Confirm.ask(t('meta_only_ask_test'), default=True):
             AIDetectorChecker.run_suite(clean_input_path(out_input))
     else:
         images = []
@@ -2046,29 +2310,30 @@ def interactive_metadata_only():
             images.extend(target.glob(ext))
         out_dir = target / "metadata_cleaned"
         out_dir.mkdir(exist_ok=True)
-        console.print(f"Processando metadados de {len(images)} imagens...")
+        proc_msg = f"Processing metadata for {len(images)} images..." if CURRENT_LANG == 'en' else f"Processando metadados de {len(images)} imagens..."
+        console.print(proc_msg)
         for img in images:
             metadata_only_mode(img, out_dir / img.name, camera=camera)
-        console.print(f"[bold green]✓ Concluído![/bold green] Arquivos salvos em: {out_dir}")
+        console.print(f"[bold green]{t('meta_batch_done', path=out_dir)}[/bold green]")
 
 
 def interactive_test_detectors():
     """Testa qualquer imagem existente nos detectores de IA"""
-    console.print("\n[bold cyan]─── Testar Imagem nos Detectores de IA ───[/bold cyan]")
+    console.print(f"\n[bold cyan]{t('test_det_title')}[/bold cyan]")
     local_images = find_local_images()
     selected_path = None
 
     if local_images:
-        console.print("[dim]Imagens encontradas na pasta atual:[/dim]")
+        console.print(f"[dim]{t('single_found_local')}[/dim]")
         img_table = Table(box=box.SIMPLE, show_header=True)
         img_table.add_column("#", style="bold yellow", width=4)
-        img_table.add_column("Arquivo", style="white")
+        img_table.add_column(t('sum_input_file') if CURRENT_LANG == 'pt' else "File", style="white")
         for idx, img_p in enumerate(local_images, 1):
             img_table.add_row(str(idx), img_p.name)
         console.print(img_table)
 
     while not selected_path:
-        user_input = Prompt.ask("Arquivo da imagem para testar").strip()
+        user_input = Prompt.ask(t('test_det_ask_prompt')).strip()
         if not user_input:
             continue
         if user_input.isdigit() and local_images and 1 <= int(user_input) <= len(local_images):
@@ -2079,14 +2344,14 @@ def interactive_test_detectors():
             selected_path = cand
             break
         else:
-            console.print(f"[bold red]Arquivo não encontrado:[/bold red] '{user_input}'. Tente novamente.")
+            console.print(f"[bold red]{t('single_file_not_found', path=user_input)}[/bold red]")
 
     results = AIDetectorChecker.run_suite(selected_path)
     detected_list = AIDetectorChecker.check_any_ai_detected(results)
     if detected_list:
         det_names = ", ".join(f"[bold red]{d[0]}[/bold red] ({d[1]})" for d in detected_list)
-        console.print(f"\n[bold yellow]⚠️ Imagem detectada como IA em:[/bold yellow] {det_names}")
-        if Confirm.ask("\n[bold cyan]Deseja processar esta imagem com o pipeline De-AI para torná-la indetectável?[/bold cyan]", default=True):
+        console.print(f"\n[bold yellow]{t('test_det_detected', detectors=det_names)}[/bold yellow]")
+        if Confirm.ask(f"\n[bold cyan]{t('test_det_ask_process')}[/bold cyan]", default=True):
             default_out = selected_path.parent / f"{selected_path.stem}_deai.jpg"
             processor = ImageDeAIProcessor(selected_path, default_out, strength='heavy')
             run_iterative_deai(processor, initial_done=False, max_attempts=5, auto_escalate=False)
@@ -2094,61 +2359,61 @@ def interactive_test_detectors():
 
 def check_dependencies():
     """Verifica e exibe o status das dependências do sistema"""
-    console.print("\n[bold cyan]─── Diagnóstico de Ferramentas e Dependências ───[/bold cyan]")
+    console.print(f"\n[bold cyan]{t('diag_title')}[/bold cyan]")
 
     dep_table = Table(box=box.ROUNDED, expand=False)
-    dep_table.add_column("Componente", style="bold")
-    dep_table.add_column("Status", style="bold")
-    dep_table.add_column("Detalhes / Versão", style="dim")
+    dep_table.add_column(t('diag_comp'), style="bold")
+    dep_table.add_column(t('diag_status'), style="bold")
+    dep_table.add_column(t('diag_details'), style="dim")
 
     # Python
     py_ver = sys.version.split()[0]
-    dep_table.add_row("Python", "[green]✓ Instalado[/green]", f"v{py_ver}")
+    dep_table.add_row("Python", f"[green]{t('diag_installed')}[/green]", f"v{py_ver}")
 
     # GPU / PyTorch CUDA
     if HAS_CUDA:
         vram_str = f" ({GPU_VRAM_GB:.1f} GB VRAM)" if GPU_VRAM_GB else ""
-        dep_table.add_row("GPU (PyTorch CUDA)", f"[bold green]✓ Ativo ({GPU_NAME})[/bold green]", f"{GPU_NAME}{vram_str}")
+        dep_table.add_row("GPU (PyTorch CUDA)", f"[bold green]{t('diag_active', gpu=GPU_NAME)}[/bold green]", f"{GPU_NAME}{vram_str}")
     else:
-        dep_table.add_row("GPU (PyTorch CUDA)", "[yellow]⚠️ CPU Mode[/yellow]", "CUDA não disponível, operando via CPU OpenCV")
+        dep_table.add_row("GPU (PyTorch CUDA)", f"[yellow]{t('diag_cpu')}[/yellow]", "CUDA unavailable, operating via CPU OpenCV" if CURRENT_LANG == 'en' else "CUDA não disponível, operando via CPU OpenCV")
 
     # Pillow
     try:
         import PIL
-        dep_table.add_row("Pillow (PIL)", "[green]✓ Instalado[/green]", f"v{PIL.__version__} (Injeção nativa de EXIF ativa)")
+        dep_table.add_row("Pillow (PIL)", f"[green]{t('diag_installed')}[/green]", f"v{PIL.__version__} ({'Native EXIF injection active' if CURRENT_LANG == 'en' else 'Injeção nativa de EXIF ativa'})")
     except Exception:
-        dep_table.add_row("Pillow (PIL)", "[red]✗ Ausente[/red]", "Execute: pip install Pillow")
+        dep_table.add_row("Pillow (PIL)", f"[red]{t('diag_missing')}[/red]", "pip install Pillow")
 
     # NumPy
     try:
         import numpy
-        dep_table.add_row("NumPy", "[green]✓ Instalado[/green]", f"v{numpy.__version__}")
+        dep_table.add_row("NumPy", f"[green]{t('diag_installed')}[/green]", f"v{numpy.__version__}")
     except Exception:
-        dep_table.add_row("NumPy", "[red]✗ Ausente[/red]", "Execute: pip install numpy")
+        dep_table.add_row("NumPy", f"[red]{t('diag_missing')}[/red]", "pip install numpy")
 
     # Rich
-    dep_table.add_row("Rich", "[green]✓ Instalado[/green]", "Interface de Terminal Ativa")
+    dep_table.add_row("Rich", f"[green]{t('diag_installed')}[/green]", "Terminal UI Active" if CURRENT_LANG == 'en' else "Interface de Terminal Ativa")
 
     # Playwright
     try:
         import playwright
-        dep_table.add_row("Playwright", "[green]✓ Instalado[/green]", "Automação Headless para Detectores Ativa")
+        dep_table.add_row("Playwright", f"[green]{t('diag_installed')}[/green]", "Headless Detector Automation Active" if CURRENT_LANG == 'en' else "Automação Headless para Detectores Ativa")
     except Exception:
-        dep_table.add_row("Playwright", "[yellow]⚠️ Opcional[/yellow]", "pip install playwright")
+        dep_table.add_row("Playwright", "[yellow]⚠️ Optional[/yellow]" if CURRENT_LANG == 'en' else "[yellow]⚠️ Opcional[/yellow]", "pip install playwright")
 
     # ExifTool
     exif_path = find_exiftool()
     if exif_path:
         try:
             ver = subprocess.run([exif_path, "-ver"], capture_output=True, text=True).stdout.strip()
-            dep_table.add_row("ExifTool", "[green]✓ Instalado[/green]", f"v{ver} ({exif_path})")
+            dep_table.add_row("ExifTool", f"[green]{t('diag_installed')}[/green]", f"v{ver} ({exif_path})")
         except Exception:
-            dep_table.add_row("ExifTool", "[green]✓ Encontrado[/green]", exif_path)
+            dep_table.add_row("ExifTool", f"[green]{t('diag_installed')}[/green]", exif_path)
     else:
         dep_table.add_row(
             "ExifTool",
-            "[yellow]⚠️ Opcional[/yellow]",
-            "Não detectado. (Pillow fará a injeção nativa de EXIF Galaxy S26 e purga básica)"
+            "[yellow]⚠️ Optional[/yellow]" if CURRENT_LANG == 'en' else "[yellow]⚠️ Opcional[/yellow]",
+            "Not detected. (Pillow provides native Galaxy S26 EXIF injection & basic purge)" if CURRENT_LANG == 'en' else "Não detectado. (Pillow fará a injeção nativa de EXIF Galaxy S26 e purga básica)"
         )
 
     console.print(dep_table)
@@ -2156,19 +2421,35 @@ def check_dependencies():
 
 def show_about():
     """Exibe informações sobre como a ferramenta funciona e detectores de IA"""
-    about_text = (
-        "[bold cyan]Como os Detectores de IA Identificam Imagens?[/bold cyan]\n\n"
-        "1. [bold white]Metadados & Credenciais C2PA:[/bold white] DALL-E 3, Adobe Firefly e Midjourney gravam manifests C2PA, JUMBF ou tags XMP declarando geração por IA.\n"
-        "2. [bold white]Ausência de EXIF de Câmera:[/bold white] Imagens sem metadados chamam atenção de detectores forenses, pois 99% das fotos reais de celular trazem EXIF completo.\n"
-        "3. [bold white]Suavidade Artificial & Frequência DCT:[/bold white] Redes de difusão criam gradientes perfeitos e assinaturas em frequência identificadas por modelos de ML.\n\n"
-        "[bold cyan]Como a ferramenta resolve tudo isso:[/bold cyan]\n"
-        "• [green]Purga Total de C2PA/IA:[/green] O container da imagem é reconstruído do zero, eliminando blocos JUMBF e tags de IA.\n"
-        "• [green]Injeção Fake EXIF Galaxy S26:[/green] Aplica metadados idênticos aos da câmera de um Samsung Galaxy S26 (lente 24mm f/1.7, ISO 50, firmware One UI).\n"
-        "• [green]Granulação de Sensor + Blur/Sharpen:[/green] Quebra a geometria matemática perfeita do gerador e simula o ruído de um sensor CMOS real.\n"
-        "• [green]Reamostragem e Compressão Dupla:[/green] Reescreve a matriz DCT e os coeficientes JPEG para corresponder a arquivos de smartphone reais.\n"
-        "• [green]Auto-Checkers Integrados:[/green] Testa automaticamente os resultados no Illuminarty, AI or Not e Hive Moderation para validar a evasão!"
-    )
-    console.print(Panel(about_text, title="[bold green]Como Funciona o De-AI + EXIF Galaxy S26[/bold green]", box=box.ROUNDED))
+    if CURRENT_LANG == 'en':
+        about_text = (
+            "[bold cyan]How Do AI Detectors Identify Images?[/bold cyan]\n\n"
+            "1. [bold white]Metadata & C2PA Credentials:[/bold white] DALL-E 3, Adobe Firefly, and Midjourney embed C2PA manifests, JUMBF boxes, or XMP tags declaring AI generation.\n"
+            "2. [bold white]Absence of Camera EXIF:[/bold white] Images devoid of metadata trigger forensic flags, since 99% of genuine phone photos contain full EXIF profiles.\n"
+            "3. [bold white]Artificial Smoothness & Frequency Artifacts:[/bold white] Diffusion networks exhibit characteristic mathematical frequency signatures and artifact peaks detected by ML models.\n\n"
+            "[bold cyan]How This Tool Solves It Completely:[/bold cyan]\n"
+            "• [green]Total C2PA/AI Purge:[/green] Rebuilds the image container from scratch, wiping JUMBF blocks and all AI signatures.\n"
+            "• [green]Authentic Galaxy S26 EXIF Simulation:[/green] Applies metadata indistinguishable from a Samsung Galaxy S26 camera (24mm f/1.7 lens, ISO 50, One UI firmware).\n"
+            "• [green]CMOS Sensor Grain & Bayer Demosaic:[/green] Breaks artificial mathematical smoothness and simulates realistic CMOS sensor photon shot noise.\n"
+            "• [green]Resampling & Baseline JPEG Compression:[/green] Rewrites the DCT matrix and quantization tables to match genuine smartphone captures.\n"
+            "• [green]Integrated Auto-Checkers:[/green] Tests results against ImageDetector, Illuminarty, Sightengine, and Hive Moderation to guarantee evasion!"
+        )
+        title = "[bold green]How De-AI + Galaxy S26 EXIF Works[/bold green]"
+    else:
+        about_text = (
+            "[bold cyan]Como os Detectores de IA Identificam Imagens?[/bold cyan]\n\n"
+            "1. [bold white]Metadados & Credenciais C2PA:[/bold white] DALL-E 3, Adobe Firefly e Midjourney gravam manifests C2PA, JUMBF ou tags XMP declarando geração por IA.\n"
+            "2. [bold white]Ausência de EXIF de Câmera:[/bold white] Imagens sem metadados chamam atenção de detectores forenses, pois 99% das fotos reais de celular trazem EXIF completo.\n"
+            "3. [bold white]Suavidade Artificial & Frequência DCT:[/bold white] Redes de difusão criam gradientes perfeitos e assinaturas em frequência identificadas por modelos de ML.\n\n"
+            "[bold cyan]Como a ferramenta resolve tudo isso:[/bold cyan]\n"
+            "• [green]Purga Total de C2PA/IA:[/green] O container da imagem é reconstruído do zero, eliminando blocos JUMBF e tags de IA.\n"
+            "• [green]Injeção Fake EXIF Galaxy S26:[/green] Aplica metadados idênticos aos da câmera de um Samsung Galaxy S26 (lente 24mm f/1.7, ISO 50, firmware One UI).\n"
+            "• [green]Granulação de Sensor + Blur/Sharpen:[/green] Quebra a geometria matemática perfeita do gerador e simula o ruído de um sensor CMOS real.\n"
+            "• [green]Reamostragem e Compressão Dupla:[/green] Reescreve a matriz DCT e os coeficientes JPEG para corresponder a arquivos de smartphone reais.\n"
+            "• [green]Auto-Checkers Integrados:[/green] Testa automaticamente os resultados no Illuminarty, AI or Not e Hive Moderation para validar a evasão!"
+        )
+        title = "[bold green]Como Funciona o De-AI + EXIF Galaxy S26[/bold green]"
+    console.print(Panel(about_text, title=title, box=box.ROUNDED))
 
 
 def interactive_menu():
@@ -2177,26 +2458,29 @@ def interactive_menu():
         console.clear()
         render_banner()
 
-        menu_table = Table(title="Menu Principal", box=box.ROUNDED, show_header=True, expand=False)
-        menu_table.add_column("Opção", justify="center", style="bold yellow")
-        menu_table.add_column("Ação", style="bold white")
-        menu_table.add_column("Descrição", style="dim")
+        menu_table = Table(title=t('main_menu_title'), box=box.ROUNDED, show_header=True, expand=False)
+        menu_table.add_column(t('col_option'), justify="center", style="bold yellow")
+        menu_table.add_column(t('col_action'), style="bold white")
+        menu_table.add_column(t('col_description'), style="dim")
 
-        menu_table.add_row("1", "📸  Processar Imagem Única", "De-AI visual completo + Injeção EXIF S26 + Teste IA")
-        menu_table.add_row("2", "📁  Processamento em Lote", "Processar pasta de imagens com EXIF e De-AI")
-        menu_table.add_row("3", "🏷️   Purgar C2PA / Injetar EXIF S26", "Apenas metadados/C2PA (Sem alterar pixels)")
-        menu_table.add_row("4", "🧪  Testar Imagem em Detectores IA", "Consultar ImageDetector, Sightengine, Hive, AI or Not, Illuminarty")
-        menu_table.add_row("5", "🔑  Configurar Chaves de API", "Inserir chaves para Sightengine, Hive, AI or Not")
+        menu_table.add_row("1", t('menu_opt1_act'), t('menu_opt1_desc'))
+        menu_table.add_row("2", t('menu_opt2_act'), t('menu_opt2_desc'))
+        menu_table.add_row("3", t('menu_opt3_act'), t('menu_opt3_desc'))
+        menu_table.add_row("4", t('menu_opt4_act'), t('menu_opt4_desc'))
+        menu_table.add_row("5", t('menu_opt5_act'), t('menu_opt5_desc'))
 
         current_mult = float(AIDetectorChecker.load_keys().get('escalation_multiplier', 1.0))
-        mult_desc = f"Definir quantas X de aumento por tentativa: [bold cyan]{current_mult:.1f}x[/bold cyan] [dim](Default: 1.0x)[/dim]"
-        menu_table.add_row("6", "⚡  Fator de Aumento da Escalação (X)", mult_desc)
-        menu_table.add_row("7", "🔍  Diagnóstico de Dependências", "Verificar ExifTool, Pillow, NumPy e Playwright")
-        menu_table.add_row("8", "📖  Como Funciona / Dicas", "Entenda C2PA, detectores e o EXIF Galaxy S26")
-        menu_table.add_row("0", "🚪  Sair", "Encerrar aplicação")
+        menu_table.add_row("6", t('menu_opt6_act'), t('menu_opt6_desc', val=current_mult))
+        menu_table.add_row("7", t('menu_opt7_act'), t('menu_opt7_desc'))
+        menu_table.add_row("8", t('menu_opt8_act'), t('menu_opt8_desc'))
+
+        # Opção 9: Idioma / Language
+        lang_desc = t('menu_opt9_desc_en') if CURRENT_LANG == 'en' else t('menu_opt9_desc_pt')
+        menu_table.add_row("9", t('menu_opt9_act'), lang_desc)
+        menu_table.add_row("0", t('menu_opt0_act'), t('menu_opt0_desc'))
 
         console.print(menu_table)
-        choice = Prompt.ask("\n[bold cyan]Selecione uma opção[/bold cyan]", choices=["1", "2", "3", "4", "5", "6", "7", "8", "0"], default="1")
+        choice = Prompt.ask(f"\n[bold cyan]{t('select_option')}[/bold cyan]", choices=["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"], default="1")
 
         if choice == "1":
             interactive_single_image()
@@ -2214,12 +2498,28 @@ def interactive_menu():
             check_dependencies()
         elif choice == "8":
             show_about()
+        elif choice == "9":
+            lang_table = Table(title=t('lang_dialog_title'), box=box.ROUNDED)
+            lang_table.add_column(t('col_option'), justify="center", style="bold yellow")
+            lang_table.add_column(t('col_action'), style="bold white")
+            lang_table.add_row("1", "🇬🇧 English (Default)")
+            lang_table.add_row("2", "🇧🇷 Português")
+            console.print(lang_table)
+            l_choice = Prompt.ask(t('lang_dialog_prompt'), choices=["1", "2"], default="1" if CURRENT_LANG == "en" else "2")
+            if l_choice == "1":
+                set_language("en")
+                console.print(f"\n{t('lang_switched_en')}")
+            else:
+                set_language("pt")
+                console.print(f"\n{t('lang_switched_pt')}")
+            time.sleep(1.0)
+            continue
         elif choice == "0":
-            console.print("\n[bold green]Até logo![/bold green] Imagens descaracterizadas e testadas.")
+            console.print(f"\n[bold green]{t('goodbye')}[/bold green]")
             break
 
         console.print("\n" + "─" * 60)
-        Prompt.ask("[dim]Pressione Enter para voltar ao menu...[/dim]", default="")
+        Prompt.ask(f"[dim]{t('press_enter')}[/dim]", default="")
 
 
 # =====================================================================
@@ -2238,48 +2538,48 @@ def main():
         description="AI Image De-Fingerprinting Tool - Strip C2PA, inject Samsung Galaxy S26 EXIF & auto-test AI detectors",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
-Exemplos:
-  %(prog)s                              # Abre menu interativo Rich
-  %(prog)s imagem.png                   # De-AI completo + EXIF Samsung Galaxy S26
-  %(prog)s imagem.png --check-detectors # De-AI + Teste automático nos detectores de IA
-  %(prog)s imagem.png --no-exif         # De-AI completo sem injetar EXIF (limpo)
-  %(prog)s imagem.png --no-metadata     # Apenas purgar C2PA e injetar EXIF S26 (sem alterar pixels)
-  %(prog)s pasta/ --batch               # Processar diretório inteiro
+Examples / Exemplos:
+  %(prog)s                              # Open Rich interactive menu
+  %(prog)s image.png                    # Full De-AI + Samsung Galaxy S26 EXIF
+  %(prog)s image.png --check-detectors  # De-AI + Automated test in AI detectors
+  %(prog)s image.png --no-exif          # Full De-AI without EXIF injection (clean)
+  %(prog)s image.png --no-metadata      # Only purge C2PA/AI and inject S26 EXIF (zero pixel changes)
+  %(prog)s folder/ --batch              # Process entire directory in batch
         """
     )
 
-    parser.add_argument('input', nargs='?', default=None, help='Arquivo ou pasta de entrada')
-    parser.add_argument('-o', '--output', help='Caminho do arquivo ou diretório de saída')
+    parser.add_argument('input', nargs='?', default=None, help='Input image file or folder')
+    parser.add_argument('-o', '--output', help='Output file or directory path')
     parser.add_argument('--strength', choices=['light', 'medium', 'heavy'],
-                        default='medium', help='Intensidade: light, medium, heavy (padrão: medium)')
+                        default='medium', help='Processing strength: light, medium, heavy (default: medium)')
     parser.add_argument('--camera', choices=['samsung_s26', 'none'],
-                        default='samsung_s26', help='Perfil de câmera EXIF simulado (padrão: samsung_s26)')
+                        default='samsung_s26', help='Simulated EXIF camera profile (default: samsung_s26)')
     parser.add_argument('--no-exif', action='store_true',
-                        help='Não injetar EXIF simulado (deixa imagem completamente sem metadados)')
+                        help='Do not inject simulated EXIF (leaves image completely clean without metadata)')
     parser.add_argument('--no-metadata', action='store_true',
-                        help='Apenas purgar C2PA/metadados e injetar EXIF, sem alterar pixels da imagem')
+                        help='Only purge C2PA/AI metadata and inject EXIF, without altering image pixels')
     parser.add_argument('--check-detectors', '-c', action='store_true',
-                        help='Verifica a imagem resultante automaticamente nos detectores de IA')
+                        help='Automatically verify the resulting image in AI detectors')
     parser.add_argument('--no-check', action='store_true',
-                        help='Não executar verificação automática nos detectores')
+                        help='Do not run automatic verification in AI detectors')
     parser.add_argument('--purify', action='store_true', default=None,
-                        help='Força purificação por difusão SDXL + restauração de alta frequência DeSynth')
+                        help='Force SDXL diffusion purification + DeSynth high-frequency detail restoration')
     parser.add_argument('--no-purify', action='store_true',
-                        help='Desativa purificação por difusão')
+                        help='Disable diffusion purification')
     parser.add_argument('--batch', action='store_true',
-                        help='Processar diretório em lote')
+                        help='Process directory in batch mode')
     parser.add_argument('--auto-escalate', action='store_true',
-                        help='Escala automaticamente para presets mais pesados até 5 tentativas se detectores acusarem IA')
+                        help='Automatically escalate to heavier presets up to 5 attempts if AI is detected')
     parser.add_argument('--max-attempts', type=int, default=5,
-                        help='Número máximo de tentativas de escalação (padrão: 5)')
+                        help='Maximum number of escalation attempts (default: 5)')
     parser.add_argument('--multiplier', '--escalate-multiplier', type=float, default=None,
-                        help='Fator multiplicador de aumento entre tentativas (padrão: 1.0x)')
+                        help='Escalation multiplier factor between attempts (default: 1.0x)')
     parser.add_argument('-v', '--verbose', action='store_true',
-                        help='Exibir detalhes de cada etapa')
+                        help='Display details of each step')
     parser.add_argument('-q', '--quiet', action='store_true',
-                        help='Modo silencioso')
+                        help='Quiet mode')
     parser.add_argument('-i', '--interactive', action='store_true',
-                        help='Força abertura do menu interativo')
+                        help='Force opening interactive menu')
 
     args = parser.parse_args()
 
@@ -2289,7 +2589,8 @@ Exemplos:
 
     in_path = Path(clean_input_path(args.input))
     if not in_path.exists():
-        console.print(f"[bold red]Erro:[/bold red] Entrada não encontrada: {in_path}")
+        err_msg = f"Input not found: {in_path}" if CURRENT_LANG == 'en' else f"Entrada não encontrada: {in_path}"
+        console.print(f"[bold red]Error / Erro:[/bold red] {err_msg}")
         sys.exit(1)
 
     camera_profile = 'none' if args.no_exif else args.camera

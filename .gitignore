@@ -26,6 +26,7 @@ scripts/teste*/
 scripts/def/
 scripts/fotos_iphone/
 *_deai.jpg
+!examples/*
 
 # IDEs e Sistema Operacional
 .vscode/
